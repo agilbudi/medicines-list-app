@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardMaxElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/image_item"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_title_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:fontFamily="@font/bayon"
+            android:paddingHorizontal="40dp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_item"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/tv_detail_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="18dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="@font/benchnine_bold"
+            app:layout_constraintTop_toBottomOf="@+id/iv_item"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@tools:sample/lorem/random" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

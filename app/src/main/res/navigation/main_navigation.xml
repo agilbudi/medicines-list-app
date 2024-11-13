@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.agilbudiprasetyo.medicineslistapp.ui.MedicinesFragment"
+        android:label="fragment_medicines"
+        tools:layout="@layout/fragment_medicines" >
+        <action
+            android:id="@+id/action_medicinesFragment_to_aboutFragment"
+            app:destination="@id/menu_about"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_about"
+        android:name="com.agilbudiprasetyo.medicineslistapp.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_medicinesFragment"
+            app:destination="@id/menu_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/menu_about"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

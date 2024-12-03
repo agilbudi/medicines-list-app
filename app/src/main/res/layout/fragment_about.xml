@@ -3,24 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.AboutFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="300dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:minWidth="320dp"
+        app:cardCornerRadius="15dp">
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/iv_about"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:contentDescription="@string/cd_foto"
                 android:scaleType="centerCrop"
+                android:background="#FFAB91"
                 tools:src="@tools:sample/avatars"/>
 
             <TextView
@@ -30,17 +33,17 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/iv_about"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/bayon"
                 android:text="@string/name"/>
             <TextView
                 android:id="@+id/tv_about_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/iv_about"
                 android:layout_below="@id/tv_name"
-                android:textSize="20sp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
                 android:fontFamily="@font/benchnine_bold"
                 tools:text="@tools:sample/full_names"/>
             <TextView
@@ -50,20 +53,20 @@
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/iv_about"
                 android:layout_below="@id/tv_about_name"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/bayon"
                 android:text="@string/email"/>
             <TextView
                 android:id="@+id/tv_about_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginHorizontal="8dp"
                 android:layout_toEndOf="@id/iv_about"
                 android:layout_below="@id/tv_email"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textColor="@android:color/holo_blue_dark"
                 android:fontFamily="@font/benchnine_bold"
-                tools:text="@tools:sample/full_names"/>
+                tools:text="@string/agilbudiprasetyo_gmail_com"/>
 
 
         </RelativeLayout>
